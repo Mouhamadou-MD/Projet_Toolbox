@@ -11,7 +11,7 @@ L'application comprend les fonctionnalités suivantes :
     Effectuer un scan de vulnérabilité avec Nmap
     (Jusqu'à 5 min d'attente pour le scan de vulnérabilité)
     
-    Effectuer une recherche d'un nom d'utilisateur sur plusieurs réseaux sociaux avec Sherlock (+ d'infos possible avec linkedin ou le moteur de recherche google mais il nécessite l'installation d'un programme exterieur)
+    Effectuer une recherche d'un nom d'utilisateur sur plusieurs réseaux sociaux avec Sherlock (+ d'infos possible avec linkedin ou le moteur de recherche google mais il nécessite l'installation d'un programme exterieur ou des API KEY)
     Effectuer une recherche d'informations sur un nom de domaine avec TheHarvester
     Lorsque le programme se termine, un message de confirmation apparaît à l'écran
 
