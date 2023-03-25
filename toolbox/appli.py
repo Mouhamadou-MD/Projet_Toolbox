@@ -5,6 +5,8 @@ import datetime
 import subprocess
 import theHarvester
 import sherlock
+#APPLI.PY
+
 # Créer la fenêtre principale
 root = tk.Tk()
 root.title("Ma toolbox---Mouhamadou_Diallo copyright2023")
@@ -21,40 +23,35 @@ def open_file():
 # Définir une fonction pour lancer un scan rapide
 def scan_hosts():
     host = tk.simpledialog.askstring("Hôte à scanner", "Entrez l'adresse IP de l'hôte ou du réseau à scanner:")
-    if host:
-        nm = nmap.PortScanner()
-        nm.scan(hosts=host, arguments="")
-        file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".txt"
-        with open(file_name, "w") as file:
-            for ip in nm.all_hosts():
-                file.write(f"Host : {ip}\n")
-                for port in nm[ip].all_tcp():
-                    if nm[ip]['tcp'][port]['state'] == 'open':
-                        file.write(f"Port : {port}\n")
-                file.write("\n")
-        tk.messagebox.showinfo("Scan terminé", f"Le scan de {host} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
+    file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"Fast_Nmap"+ ".txt"
+    with open(file_name, "w") as f:
+        subprocess.run(["nmap", "-Pn", host], stdout=f)
+    tk.messagebox.showinfo("Scan terminé", f"Le scan de {host} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
         
 # Définir une fonction pour lancer un scan précis
 def scan_hosts_slow():
     host = tk.simpledialog.askstring("Hôte à scanner", "Entrez l'adresse IP de l'hôte ou du réseau à scanner:")
-    if host:
-        nm = nmap.PortScanner()
-        nm.scan(hosts=host, arguments="-")
-        file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".txt"
-        with open(file_name, "w") as file:
-            for ip in nm.all_hosts():
-                file.write(f"Host : {ip}\n")
-                for port in nm[ip].all_tcp():
-                    if nm[ip]['tcp'][port]['state'] == 'open':
-                        file.write(f"Port : {port}\n")
-                file.write("\n")
-        tk.messagebox.showinfo("Scan terminé", f"Le scan de {host} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
+    file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"nmap_vuln"+ ".txt"
+    with open(file_name, "w") as f:
+        subprocess.run(["nmap", "-Pn", host], stdout=f)
+    tk.messagebox.showinfo("Scan terminé", f"Le scan de {host} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
+
+# Définir une fonction pour lancer un scan de vulnérabilité
+def scan_vuln():
+	host = tk.simpledialog.askstring("Hôte à scanner", "Entrez l'adresse IP de l'hôte ou du réseau à scanner:")
+	file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"Vuln_Nmap"+ ".txt"
+	with open(file_name, "w") as f:
+		cmd= f"sudo nmap --script-updatedb && nmap -Pn -sV --script vuln {host}>{file_name}"
+		subprocess.run(cmd, shell=True)
+	tk.messagebox.showinfo("Scan terminé", f"Le scan de {host} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
+	
+	
 
 # Définir une fonction pour lancer TheHarvester
 def run_theHarvester(mode):
     domain = tk.simpledialog.askstring("Domaine à scanner", "Entrez le nom de domaine à scanner:")
     if domain:
-        file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".txt"
+        file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"theHarverster"+ ".txt"
         if mode == "emails":
             cmd = f"theHarvester -d {domain}  -b all > {file_name}"
         elif mode == "hosts":
@@ -75,8 +72,6 @@ def scan_username():
     # Exécuter la commande sherlock pour rechercher les informations
     	command = f"sherlock  --timeout 1 {nom_user} > {file_name}"
     	subprocess.run(command, shell=True)
-   # os.system(command)
-
     	tk.messagebox.showinfo("Scan terminé", f"Le scan de {nom_user} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
         
 
@@ -90,6 +85,7 @@ menu_bar.add_cascade(label="Fichier", menu=file_menu)
 nmap_menu = tk.Menu(menu_bar, tearoff=0)
 nmap_menu.add_command(label="Scan rapide", command=scan_hosts)
 nmap_menu.add_command(label="Scan complet", command=scan_hosts_slow)
+nmap_menu.add_command(label="Scan de vulnerabilité", command=scan_vuln)
 menu_bar.add_cascade(label="Nmap", menu=nmap_menu)
 
 # Créer un menu pour theHarvester
