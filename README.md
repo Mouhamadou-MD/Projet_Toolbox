@@ -6,7 +6,7 @@ Fonctionnalités
 L'application comprend les fonctionnalités suivantes :
 
     Ouvrir un fichier texte
-    Effectuer un scan rapide avec Nmap
+    Effectuer un scan rapide avec Nmap (~20 secondes)
     Effectuer un scan complet avec Nmap
     Effectuer un scan de vulnérabilité avec Nmap
     Effectuer une recherche d'informations avec TheHarvester
