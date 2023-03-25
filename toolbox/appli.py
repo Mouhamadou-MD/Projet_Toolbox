@@ -93,7 +93,7 @@ menu_bar.add_cascade(label="Nmap", menu=nmap_menu)
 theharvester_menu = tk.Menu(menu_bar, tearoff=0)
 #theharvester_menu.add_command(label="Search emails", command=lambda: run_theHarvester("emails"))
 #theharvester_menu.add_command(label="Search hosts", command=lambda: run_theHarvester("hosts"))
-theharvester_menu.add_command(label="Rechercher des hôtes et des IP", command=lambda: run_theHarvester("all"))
+theharvester_menu.add_command(label="recherche d'informations sur un nom de domaine", command=lambda: run_theHarvester("all"))
 menu_bar.add_cascade(label="theHarvester", menu=theharvester_menu)
 
 # Créer un menu pour Sherlock
