@@ -10,7 +10,8 @@ L'application comprend les fonctionnalités suivantes :
     Effectuer un scan complet avec Nmap
     Effectuer un scan de vulnérabilité avec Nmap
     (Jusqu'à 5 min d'attente pour le scan de vulnérabilité)
-    Effectuer une recherche d'informations avec TheHarvester
+    
+    Effectuer une recherche d'informations sur un nom de domaine avec TheHarvester
     Effectuer une recherche d'un nom d'utilisateur sur plusieurs réseaux sociaux avec Sherlock
 
 Prérequis
@@ -18,11 +19,6 @@ Prérequis
     Python 3.6 ou une version ultérieure
     Les packages tkinter, nmap, theHarvester, et sherlock doivent être installés
 
-Comment utiliser l'application
-
-    Ouvrez une invite de commande dans le dossier contenant le fichier "main.py".
-    Tapez "sudo python main.py" pour lancer l'application.
-    Choisissez l'outil que vous souhaitez utiliser à partir du menu déroulant.
     
 Install
 
