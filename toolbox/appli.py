@@ -41,7 +41,7 @@ def scan_vuln():
 	host = tk.simpledialog.askstring("Hôte à scanner", "Entrez l'adresse IP de l'hôte ou du réseau à scanner:")
 	file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"-Vuln_Nmap"+ ".txt"
 	with open(file_name, "w") as f:
-		#mis à jour de la base de donneés + Lancement du scan 
+		# mis à jour de la base de donneés + Lancement du scan 
 		cmd= f"sudo nmap --script-updatedb && nmap -Pn -sV --script vuln {host}>{file_name}"
 		subprocess.run(cmd, shell=True)
 	tk.messagebox.showinfo("Scan terminé", f"Le scan de {host} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
@@ -70,7 +70,7 @@ def scan_username():
     if nom_user != "":
     	file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"user_scan"+ ".txt"
 
-    # Exécuter la commande sherlock pour rechercher les informations
+    # Exécuter la commande sherlock pour rechercher les informations 1 seconde par site
     	command = f"sherlock  --timeout 1 {nom_user} > {file_name}"
     	subprocess.run(command, shell=True)
     	tk.messagebox.showinfo("Scan terminé", f"Le scan de {nom_user} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
