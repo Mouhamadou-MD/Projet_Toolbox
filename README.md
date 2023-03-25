@@ -20,7 +20,7 @@ Prérequis
 Comment utiliser l'application
 
     Ouvrez une invite de commande dans le dossier contenant le fichier "main.py".
-    Tapez "python main.py" pour lancer l'application.
+    Tapez "sudo python main.py" pour lancer l'application.
     Choisissez l'outil que vous souhaitez utiliser à partir du menu déroulant.
 
 Crédits
