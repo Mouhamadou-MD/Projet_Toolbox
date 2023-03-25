@@ -22,6 +22,10 @@ Comment utiliser l'application
     Ouvrez une invite de commande dans le dossier contenant le fichier "main.py".
     Tapez "sudo python main.py" pour lancer l'application.
     Choisissez l'outil que vous souhaitez utiliser à partir du menu déroulant.
+  
+Avertissement
+
+L'utilisation de cet outil peut être considérée comme de la surveillance ou du piratage et peut être illégale dans certaines juridictions. L'auteur de cet outil n'assume aucune responsabilité pour toute utilisation abusive ou illégale de cet outil.
 
 Crédits
 
