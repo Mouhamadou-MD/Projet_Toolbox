@@ -1,0 +1,6 @@
+sudo apt update && apt upgrade
+sudo apt install pip
+sudo apt install python3
+sudo apt install nmap
+sudo apt install theHarvester
+sudo apt install sherlock
