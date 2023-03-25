@@ -13,6 +13,7 @@ L'application comprend les fonctionnalités suivantes :
     
     Effectuer une recherche d'informations sur un nom de domaine avec TheHarvester
     Effectuer une recherche d'un nom d'utilisateur sur plusieurs réseaux sociaux avec Sherlock
+    Lorsque le programme se termine, un message de confirmation apparaît à l'écran
 
 Prérequis
 
