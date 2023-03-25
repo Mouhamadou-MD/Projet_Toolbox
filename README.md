@@ -26,6 +26,7 @@ Comment utiliser l'application
 Install
 
     git clone https://github.com/Mouhamadou-MD/Projet_Toolbox
+    sudo chmod 744
     cd Projet_Toolbox
     sudo apt install pip
     sudo apt update && sudo apt upgrade
