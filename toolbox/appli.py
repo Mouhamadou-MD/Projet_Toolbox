@@ -23,7 +23,7 @@ def open_file():
 # Définir une fonction pour lancer un scan rapide
 def scan_hosts():
     host = tk.simpledialog.askstring("Hôte à scanner", "Entrez l'adresse IP de l'hôte ou du réseau à scanner:")
-    file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"Fast_Nmap"+ ".txt"
+    file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"-Fast_Nmap"+ ".txt"
     with open(file_name, "w") as f:
         subprocess.run(["nmap", "-Pn", host], stdout=f)
     tk.messagebox.showinfo("Scan terminé", f"Le scan de {host} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
@@ -31,7 +31,7 @@ def scan_hosts():
 # Définir une fonction pour lancer un scan précis
 def scan_hosts_slow():
     host = tk.simpledialog.askstring("Hôte à scanner", "Entrez l'adresse IP de l'hôte ou du réseau à scanner:")
-    file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"nmap_vuln"+ ".txt"
+    file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"-Slow_Nmap"+ ".txt"
     with open(file_name, "w") as f:
         subprocess.run(["nmap", "-Pn", host], stdout=f)
     tk.messagebox.showinfo("Scan terminé", f"Le scan de {host} est terminé. Les résultats ont été enregistrés dans le fichier {file_name}.")
@@ -39,7 +39,7 @@ def scan_hosts_slow():
 # Définir une fonction pour lancer un scan de vulnérabilité
 def scan_vuln():
 	host = tk.simpledialog.askstring("Hôte à scanner", "Entrez l'adresse IP de l'hôte ou du réseau à scanner:")
-	file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"Vuln_Nmap"+ ".txt"
+	file_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +"-Vuln_Nmap"+ ".txt"
 	with open(file_name, "w") as f:
 		cmd= f"sudo nmap --script-updatedb && nmap -Pn -sV --script vuln {host}>{file_name}"
 		subprocess.run(cmd, shell=True)
