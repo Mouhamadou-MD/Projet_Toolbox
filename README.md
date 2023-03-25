@@ -9,7 +9,7 @@ L'application comprend les fonctionnalités suivantes :
     Effectuer un scan rapide avec Nmap
     Effectuer un scan complet avec Nmap
     Effectuer un scan de vulnérabilité avec Nmap
-    (Jusqu'à 2 min d'attente pour le scan de vulnérabilité)
+    (Jusqu'à 5 min d'attente pour le scan de vulnérabilité)
     Effectuer une recherche d'informations avec TheHarvester
     Effectuer une recherche d'un nom d'utilisateur sur plusieurs réseaux sociaux avec Sherlock
 
