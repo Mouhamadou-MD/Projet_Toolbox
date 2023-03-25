@@ -25,10 +25,10 @@ Comment utiliser l'application
     
 Install
 
-git clone https://github.com/Mouhamadou-MD/Projet_Toolbox
-cd Projet_Toolbox
-sudo apt install pip
-pip3 install -r requirements.txt
+    git clone https://github.com/Mouhamadou-MD/Projet_Toolbox
+    cd Projet_Toolbox
+    sudo apt install pip
+    pip3 install -r requirements.txt
   
 Avertissement
 
