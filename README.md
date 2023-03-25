@@ -6,11 +6,12 @@ Fonctionnalités
 L'application comprend les fonctionnalités suivantes :
 
     Ouvrir un fichier texte
-    Effectuer un scan rapide avec Nmap (~20 secondes)
+    Effectuer un scan rapide avec Nmap
     Effectuer un scan complet avec Nmap
     Effectuer un scan de vulnérabilité avec Nmap
+    (Jusqu'à 2 min d'attente pour le scan de vulnérabilité)
     Effectuer une recherche d'informations avec TheHarvester
-    Effectuer une recherche d'un nom d'utilisateur avec Sherlock
+    Effectuer une recherche d'un nom d'utilisateur sur plusieurs réseaux sociaux avec Sherlock
 
 Prérequis
 
@@ -26,11 +27,18 @@ Comment utiliser l'application
 Install
 
     git clone https://github.com/Mouhamadou-MD/Projet_Toolbox
-    sudo chmod 744
     cd Projet_Toolbox
+    sudo apt update && apt upgrade
     sudo apt install pip
-    sudo apt update && sudo apt upgrade
-    pip3 install -r requirements.txt
+    sudo apt install python3
+    sudo apt install nmap
+    sudo pip nstall python-nmap
+    sudo apt-get install python3-tk
+    sudo apt install thehavester
+    sudo apt install sherlock
+    sudo apt install pip
+    cd toolbox/
+    sudo python3 appli.py
   
 Avertissement
 
