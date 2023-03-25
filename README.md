@@ -28,6 +28,7 @@ Install
     git clone https://github.com/Mouhamadou-MD/Projet_Toolbox
     cd Projet_Toolbox
     sudo apt install pip
+    sudo apt update && apt upgrade
     pip3 install -r requirements.txt
   
 Avertissement
