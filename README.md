@@ -22,6 +22,13 @@ Comment utiliser l'application
     Ouvrez une invite de commande dans le dossier contenant le fichier "main.py".
     Tapez "sudo python main.py" pour lancer l'application.
     Choisissez l'outil que vous souhaitez utiliser à partir du menu déroulant.
+    
+Install
+
+git clone https://github.com/Mouhamadou-MD/Projet_Toolbox
+cd Projet_Toolbox
+sudo apt install pip
+pip3 install -r requirements.txt
   
 Avertissement
 
